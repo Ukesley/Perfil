@@ -187,7 +187,7 @@ section p {
 section h2 {
     font-size: 25px;
     font-weight: normal;
-    margin-bottom: 20px;
+    margin-bottom: 20px 0;
 }
 
 #sectionInicio {
@@ -292,37 +292,105 @@ section h2 {
     font-weight: bolder;
 }
 
-.portifolioCardImg {
-    position: relative;
-    width: 500px;
-    height: 250px;
+#portfolioGrid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.portifolioCardImg > div:first-child {
-    width: 100%;
+.portifolioCardImg {
+    position: relative;
+    width: 49%;
+    min-width: 300px;
+    height: 250px;
+    margin-bottom: 100px;
+}
+
+.overflow {
     height: 100%;
-    background: url(../img/projetoLinks.png) no-repeat center center/cover;
+    width: 100%;
     overflow: hidden;
 }
 
-.portifolioCardImg img {
+.overflow > div {
     height: 100%;
-    margin: 0 auto;
 }
 
-.portifolioCardImg:hover img {
+.overflow > div:hover {
     transform: scale(1.1);
+}
+
+.overflow #img-1 {
+    background: url(..//img/projetoLinks.png) no-repeat center center/cover;
 }
 
 .portifolioCardTitulo {
     position: absolute;
-    width: 400px;
-    height: 200px;
+    width: 90%;
+    height: auto;
     background: var(--background-header);
-    bottom: -60%;
+    bottom: -30%;
     right: 0;
     padding: 20px;
-    
+}
+
+.portifolioCardTitulo p {
+    font-size: 12;
+}
+
+.portifolioCardTitulo p:last-child {
+    font-weight: bolder;
+}
+
+#contatoRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contatoRow > div{
+    width: 49%;
+    min-width: 300px;
+    background: var(--background-header);
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+#contatoRowText div {
+    display: flex;
+    align-items: center;
+}
+
+#contatoRowText p {
+    margin: auto 0;
+}
+
+#contato input {
+    background: none;
+    border: 1px solid var(--text-color);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#contatoRowForm div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#inputName, #inputE-mail {
+    width: 49%;
+}
+
+#inputSubject {
+    width: 100%;
+}
+
+#contato textarea {
+    background: none;
+    border: 1px solid var(--text-color);
+    width: 100%;
+    height: 100px;
+    padding: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -380,5 +448,10 @@ section h2 {
 
     .card {
         width: 100%;
+    }
+
+    .portifolioCardImg {
+        width: 100%;
+        margin-bottom: 200px;
     }
 }
