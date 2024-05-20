@@ -454,4 +454,8 @@ section h2 {
         width: 100%;
         margin-bottom: 200px;
     }
+
+    #contatoRow > div {
+        width: 100%;
+    }
 }
